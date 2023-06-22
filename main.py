@@ -5,7 +5,6 @@ from pydub import AudioSegment
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 import torch
 import whisper
-
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 models = T5ForConditionalGeneration.from_pretrained("Michau/t5-base-en-generate-headline")
 tokenizer = T5Tokenizer.from_pretrained("Michau/t5-base-en-generate-headline")

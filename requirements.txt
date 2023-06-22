@@ -60,3 +60,4 @@ xxhash
 yarl 
 zipp 
 sentencepiece
+urllib3==1.26.16
