@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if headings %}
+            <a href="/" class="btn btn-primary mt-4 mb-3">Go Back</a>
+        {% endif %}
+
+        <h1 class="mt-5 mb-4">Audio Analysis</h1>
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="url">YouTube Link:</label>
+                <input type="text" class="form-control" id="url" name="url" required>
+            </div>
+            <div class="form-group">
+                <label for="name">File Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Process</button>
+        </form>
+
+        {% if headings %}
+            <h2 class="mt-5 mb-4">Generated Headings and Text:</h2>
+            {% for index in range(headings|length) %}
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Segment {{ index+1 }}</h3>
+                        <h5 class="card-subtitle mb-2 text-muted">{{ headings[index] }}</h5>
+                        <p class="card-text">{{ texts[index] }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
