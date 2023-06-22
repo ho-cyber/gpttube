@@ -24,7 +24,7 @@ importlib-metadata
 joblib 
 multidict 
 multiprocess 
-numpy 
+numpy==1.21.6
 outcome==1.2.0
 packaging 
 pandas==1.5.3
