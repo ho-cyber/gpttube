@@ -59,3 +59,4 @@ wsproto==1.2.0
 xxhash 
 yarl 
 zipp 
+sentencepiece
