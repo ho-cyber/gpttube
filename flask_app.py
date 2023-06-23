@@ -78,7 +78,7 @@ def home():
         with open(name, "w") as f:
             f.write(original_text)
 
-        return render_template('result.html', headings=headings, texts=original_texts)
+        return render_template('results.html', headings=headings, texts=original_texts)
 
     return render_template('index.html')
 
