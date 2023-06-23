@@ -60,5 +60,5 @@ xxhash
 yarl 
 zipp 
 sentencepiece
-urllib3==1.26.16
+
 git+https://github.com/openai/whisper.git 
